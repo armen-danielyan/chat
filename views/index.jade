@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    h1= title
+    p Welcome to #{title}
+    form(method='post', action='/login')
+        label(for='nickname') NickName
+        input(type='text', id='nickname', name='nickname')
+
+        label(for='servername') Server
+        input(type='text', id='servername', name='servername')
+
+        label(for='channelname') Channel
+        input(type='text', id='channelname', name='channelname')
+
+        input(type='submit', value='Connect')
